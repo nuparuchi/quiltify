@@ -47,8 +47,8 @@ the similarity method used to decide which patch is used among patches of the sa
 2: randomly select potential patch
 _: select the first patch in the array (the first patch alphabetically in patches/)
 
-quantize: default 1 (no effect unless greater than 1)
-no effect unless greater than one changes each r,g, and b value in each color used in the output image
+quantize: default 1
+no effect unless greater than one. changes each r,g, and b value in each color used in the output image
 to the same number minus its remainder when divided by the provided value. causes similar colors to be the
 same rather than slightly different
 
