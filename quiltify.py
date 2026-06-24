@@ -19,7 +19,8 @@ import random
 #   (and similarity, as a tie-breaker)
 # - fill that part of the image with that patch
 
-def quiltify(imageName, quilted=False, scale=1, bleach=0, contrast=0, similarity=0):
+def quiltify(imageName, quilted=False, scale=1, bleach=0, contrast=0,
+             similarity=0, quantize=1):
     print("Quilting " + imageName)
     
     #get patches
@@ -217,6 +218,11 @@ def quiltify(imageName, quilted=False, scale=1, bleach=0, contrast=0, similarity
 
                     ourColors[0][i] = max(0, min(255, ourColors[0][i]))
                     ourColors[1][i] = max(0, min(255, ourColors[1][i]))
+
+            if quantize > 1:
+                for i in range(3):
+                    ourColors[0][i] -= ourColors[0][i] % quantize
+                    ourColors[1][i] -= ourColors[1][i] % quantize
             
             ourColors[0] = tuple(ourColors[0])
             ourColors[1] = tuple(ourColors[1])
@@ -241,6 +247,7 @@ thisScale = 1
 thisBleach = 0
 thisContrast = 0
 thisSimilarity = 0
+thisQuantize = 1
 quiltifyAll = sys.argv[1] == "all"
 
 for arg in sys.argv[2:]:
@@ -255,6 +262,8 @@ for arg in sys.argv[2:]:
             thisContrast = float(arg.split(':')[1])
         case "similarity":
             thisSimilarity = int(arg.split(':')[1])
+        case "quantize":
+            thisQuantize = int(arg.split(':')[1])
         case _:
             print("Arg not understood: " + arg)
 
@@ -266,9 +275,9 @@ if quiltifyAll:
             continue
         quiltify(fileName, quilted=thisQuilted, scale=thisScale,
                  bleach=thisBleach, contrast=thisContrast,
-                 similarity=thisSimilarity)
+                 similarity=thisSimilarity, quantize=thisQuantize)
 
 else:
     quiltify(sys.argv[1], quilted=thisQuilted, scale=thisScale,
              bleach=thisBleach, contrast=thisContrast,
-             similarity=thisSimilarity)
+             similarity=thisSimilarity, quantize=thisQuantize)
