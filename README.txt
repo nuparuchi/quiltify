@@ -61,4 +61,4 @@ the program scans patches for color #000000, so any other color will be treated 
 program automatically inverts each patch, so don't include inverted versions of patches (will cause slowdown).
 rotations of patches are necessary if desired.
 
-![alt text](examples/destiel.png)
+![alt text](/examples/destiel.png)
