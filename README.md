@@ -1,5 +1,7 @@
 Quiltify: A program that recreates images by covering them with 8x8 patches
 
+![Two panels of Castiel and Dean from Supernatural. In the upper panel, Castiel says "I love you". In the lower panel, Dean, whose image has been quiltified, says "I am quiltified using https://github.com/nuparuchi/quiltify](/examples/destiel.png)
+
 How to use:
 in command prompt, in folder with quiltify.py (and python3 installed) and patches folder, run quiltify.py.
 supply the path to the image to be quilted.
@@ -60,5 +62,3 @@ further patches can be added/removed in patches folder. name (mostly) does not m
 the program scans patches for color #000000, so any other color will be treated as the light color.
 program automatically inverts each patch, so don't include inverted versions of patches (will cause slowdown).
 rotations of patches are necessary if desired.
-
-![Two panels of Castiel and Dean from Supernatural. In the upper panel, Castiel says "I love you". In the lower panel, Dean, whose image has been quiltified, says "I am quiltified using https://github.com/nuparuchi/quiltify](/examples/destiel.png)
