@@ -257,7 +257,7 @@ for arg in sys.argv[2:]:
         case "scale":
             thisScale = float(arg.split(':')[1])
         case "bleach":
-            thisBleach = float(arg.split(':')[1])
+            thisBleach = int(arg.split(':')[1])
         case "contrast":
             thisContrast = float(arg.split(':')[1])
         case "similarity":
