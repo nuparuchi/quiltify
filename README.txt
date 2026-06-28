@@ -61,4 +61,4 @@ the program scans patches for color #000000, so any other color will be treated 
 program automatically inverts each patch, so don't include inverted versions of patches (will cause slowdown).
 rotations of patches are necessary if desired.
 
-![Two panels featuring Castiel and Dean from Supernatural. In the upper panel Castiel says "I love you". In the lower panel, Dean, whose image has been quiltified with the program, says "I am quiltified using https:// github.com/nuparuchi/quiltify".](https://github.com/nuparuchi/quiltify/blob/image-readme/examples/destiel.png)
+![Two panels featuring Castiel and Dean from Supernatural. In the upper panel Castiel says "I love you". In the lower panel, Dean, whose image has been quiltified with the program, says "I am quiltified using https:// github.com/nuparuchi/quiltify".](examples/destiel.png)
