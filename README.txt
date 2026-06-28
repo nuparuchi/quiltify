@@ -60,3 +60,5 @@ further patches can be added/removed in patches folder. name (mostly) does not m
 the program scans patches for color #000000, so any other color will be treated as the light color.
 program automatically inverts each patch, so don't include inverted versions of patches (will cause slowdown).
 rotations of patches are necessary if desired.
+
+https://github.com/nuparuchi/quiltify/blob/image-readme/examples/destiel.png
